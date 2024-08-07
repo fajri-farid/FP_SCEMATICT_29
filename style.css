@@ -1,0 +1,159 @@
+.notesContainer {
+	padding: 20px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	flex-wrap: wrap;
+	gap: 16px;
+}
+
+.noteCard {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.noteCardHeader {
+	display: flex;	
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+	
+	.noteCard {
+		border: 1px solid #ccc;
+		border-radius: 8px;
+		padding: 16px;
+	}
+	
+	.noteCardHeader {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 8px;
+	}
+	
+	.noteCardTitle {
+		font-size: 1.25em;
+		margin: 0;
+		flex-grow: 1;
+	}
+	
+	.noteCardActions {
+		display: flex;
+		align-items: center;
+	}
+	
+	.noteCardButton {
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0;
+		margin-left: 4px; 
+	}
+	
+	.noteCardButton svg {
+		width: 16px;
+		height: 16px;
+	}
+	
+	.noteCardCategory {
+		border-radius: 4px;
+		padding: 1em 1em;
+		margin-left: 8px;
+		font-size: 0.875em;
+		color: #333;
+	}
+}
+
+.noteCardTitle {
+	font-size: 1.25em;
+	margin: 0;
+}
+
+.noteCardBody {
+	font-size: 1em;
+	padding: 0;
+	margin-top: 8px;
+}
+
+.noteCardButton {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	object-position: right;
+}
+
+.noteCardButton svg {
+	width: 16px;
+	height: 16px;
+}
+
+.noteCardFooter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.noteCardTime {
+	font-size: 1em;
+	margin-top: 1em;
+	font-weight: bolder;
+}
+
+.noteCardDate {
+	font-size: 1em;
+	margin-top: 1em;
+	font-weight: bolder;
+}
+
+.noteCardCategory#workCategory {
+	background-color: #ff00ea;
+	border-radius: 4px;
+	padding: 4px 8px;
+	font-size: 0.875em;
+	color: #ffffff;
+}
+
+.noteCardCategory#personalCategory {
+	background-color: #ff8800;
+	border-radius: 4px;
+	padding: 4px 8px;
+	font-size: 0.875em;
+	color: #ffffff;
+}
+
+.noteCardCategory#schoolCategory {
+	background-color: #0011ff;
+	border-radius: 4px;
+	padding: 4px 8px;
+	font-size: 0.875em;
+	color: #ffffff;
+}
+
+.gridItem#workCategory {
+	background-color: rgba(255, 0, 234, 0.3);
+	border-radius: 10px;
+	padding: 4px 8px;
+	font-size: 0.875em;
+	color: #000000;
+}
+
+.gridItem#personalCategory {
+	background-color: rgba(255, 136, 0, 0.3);
+	border-radius: 10px;
+	padding: 4px 8px;
+	font-size: 0.875em;
+	color: #000000;
+}
+
+.gridItem#schoolCategory {
+	background-color: rgba(0, 17, 255, 0.3);
+	border-radius: 10px;
+	padding: 4px 8px;
+	font-size: 0.875em;
+	color: #000000;
+}
