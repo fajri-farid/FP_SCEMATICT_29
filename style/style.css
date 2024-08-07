@@ -5,6 +5,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, sans-serif;
 }
@@ -41,42 +42,24 @@ body {
 }
 
 #all:hover {
-  background-color: #5b99c2;
-  color: #ffff;
-  padding: 12px 30px;
-  border-radius: 10px;
+  background-color: cornflowerblue;
+  color: #fff;
 }
-
 #home:hover {
-  background-color: #ffad60;
-  color: #ffff;
-  padding: 12px 30px;
-  border-radius: 10px;
-}
-
-#job-list:hover {
   background-color: orange;
-  color: #ffff;
-  padding: 12px 30px;
-  border-radius: 10px;
+  color: #fff;
 }
 #work:hover {
-  background-color: #7fa1c3;
-  color: #ffff;
-  padding: 12px 30px;
-  border-radius: 10px;
+  background-color: #03346e;
+  color: #fff;
 }
 #Personal:hover {
-  background-color: #7e9690;
-  color: #ffff;
-  padding: 12px 30px;
-  border-radius: 10px;
+  background-color: #399918;
+  color: #fff;
 }
 #School:hover {
-  background-color: #e3a5c7;
-  color: #ffff;
-  padding: 12px 30px;
-  border-radius: 10px;
+  background-color: #c75b7a;
+  color: #fff;
 }
 
 .nav-button::after {
@@ -94,17 +77,17 @@ body {
 }
 
 .nav-button[id="home"]::after {
-  background-color: #ffad60;
-}
-
-.nav-button[id="School"]::after {
-  background-color: #e3a5c7;
+  background-color: orange;
 }
 
 .nav-button[id="work"]::after {
-  background-color: #7fa1c3;
+  background-color: #03346e;
 }
 
 .nav-button[id="Personal"]::after {
-  background-color: #7e9690;
+  background-color: #399918;
+}
+
+.nav-button[id="School"]::after {
+  background-color: #c75b7a;
 }
