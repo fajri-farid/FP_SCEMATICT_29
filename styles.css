@@ -1,0 +1,26 @@
+.add-note button {
+  margin: 0;
+  padding: 16px 32px; /* untuk mengubah jarak tulisan ke border*/
+  width: 100%; /* digunakan untuk menyesuaikan mau berapa % button 'add new notes' memenuhi layar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 45px; /* mengubah ukuran button bisa menggunakan ukuran font-size ini */
+  background-color: rgb(
+    7,
+    39,
+    236
+  ); /* warna background button 'add new notes' */
+  color: white; /* warna tulisan button 'add new notes' */
+  border: none; /* warna border button 'add new notes' */
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+.add-note button:hover {
+  /* berubah warna button 'add new notes' */
+  background-color: rgb(5, 27, 172);
+  color: white;
+}
