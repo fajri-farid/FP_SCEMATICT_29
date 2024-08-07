@@ -1,0 +1,110 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #f8f8f8;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin: 0 10px;
+  position: relative;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #666;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: relative;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#all:hover {
+  background-color: #5b99c2;
+  color: #ffff;
+  padding: 12px 30px;
+  border-radius: 10px;
+}
+
+#home:hover {
+  background-color: #ffad60;
+  color: #ffff;
+  padding: 12px 30px;
+  border-radius: 10px;
+}
+
+#job-list:hover {
+  background-color: orange;
+  color: #ffff;
+  padding: 12px 30px;
+  border-radius: 10px;
+}
+#work:hover {
+  background-color: #7fa1c3;
+  color: #ffff;
+  padding: 12px 30px;
+  border-radius: 10px;
+}
+#Personal:hover {
+  background-color: #7e9690;
+  color: #ffff;
+  padding: 12px 30px;
+  border-radius: 10px;
+}
+#School:hover {
+  background-color: #e3a5c7;
+  color: #ffff;
+  padding: 12px 30px;
+  border-radius: 10px;
+}
+
+.nav-button::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background-color 0.3s;
+}
+
+.nav-button[id="home"]::after {
+  background-color: #ffad60;
+}
+
+.nav-button[id="School"]::after {
+  background-color: #e3a5c7;
+}
+
+.nav-button[id="work"]::after {
+  background-color: #7fa1c3;
+}
+
+.nav-button[id="Personal"]::after {
+  background-color: #7e9690;
+}
