@@ -1,0 +1,23 @@
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(230, 230, 230);
+    padding: 8px;
+}
+
+.search-bar {
+    padding: 4px;
+    width: 100%;
+    max-width: 43%;
+    height: 31px;
+    padding-left: 38px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border: 1px solid white;
+}
+
+.material-symbols-outlined {
+   color: gray;
+   position: relative;
+   left: 30px;
+}
