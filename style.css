@@ -12,300 +12,312 @@ body {
 
 /* INI STYLING UNTUK NAVBAR */
 .navbar {
-    background-color: #f8f8f8;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  
-  .nav-item {
-    margin: 0 10px;
-    position: relative;
-  }
-  
-  .nav-button {
-    background: none;
-    border: none;
-    font-size: 16px;
-    color: #666;
-    cursor: pointer;
-    padding: 10px 20px;
-    border-radius: 5px;
-    position: relative;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  #all:hover {
-    background-color: cornflowerblue;
-    color: #fff;
-  }
-  #home:hover {
-    background-color: orange;
-    color: #fff;
-  }
-  #work:hover {
-    background-color: #03346e;
-    color: #fff;
-  }
-  #Personal:hover {
-    background-color: #399918;
-    color: #fff;
-  }
-  #School:hover {
-    background-color: #c75b7a;
-    color: #fff;
-  }
-  
-  .nav-button::after {
-    content: "";
-    display: block;
-    width: 6px;
-    height: 6px;
-    background-color: transparent;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: background-color 0.3s;
-  }
-  
-  .nav-button[id="home"]::after {
-    background-color: orange;
-  }
-  
-  .nav-button[id="work"]::after {
-    background-color: #03346e;
-  }
-  
-  .nav-button[id="Personal"]::after {
-    background-color: #399918;
-  }
-  
-  .nav-button[id="School"]::after {
-    background-color: #c75b7a;
-  }
+  background-color: #f8f8f8;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
 
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin: 0 10px;
+  position: relative;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #666;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: relative;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#all:hover {
+  background-color: cornflowerblue;
+  color: #fff;
+}
+#home:hover {
+  background-color: orange;
+  color: #fff;
+}
+#work:hover {
+  background-color: #03346e;
+  color: #fff;
+}
+#Personal:hover {
+  background-color: #399918;
+  color: #fff;
+}
+#School:hover {
+  background-color: #c75b7a;
+  color: #fff;
+}
+
+.nav-button::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background-color 0.3s;
+}
+
+.nav-button[id="home"]::after {
+  background-color: orange;
+}
+
+.nav-button[id="work"]::after {
+  background-color: #03346e;
+}
+
+.nav-button[id="Personal"]::after {
+  background-color: #399918;
+}
+
+.nav-button[id="School"]::after {
+  background-color: #c75b7a;
+}
 
 /* INI STYLING UNTUK SEARCH BAR */
 .search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(230, 230, 230);
-    padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(230, 230, 230);
+  padding: 8px; /* padding kotak abu abu search bar*/
+  position: relative;
+}
+
+.search input {
+  outline: none; /* hilangin outline hitam */
+}
+
+/* hilangkan tanda silang pas lagi ngetik */
+.search input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .search-bar {
-    padding: 4px;
-    width: 100%;
-    max-width: 43%;
-    height: 40px;
-    padding-left: 38px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    border: 1px solid white;
+  padding: 8px;
+  width: 100%;
+  max-width: 100%;
+  height: 60px; /* atur size dari search, bukan yang backgroundnya */
+  padding-left: 60px; /* atur jarak text inputan dengan logo search*/
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border: 1px solid white;
+  font-size: 15px;
 }
 
 .material-symbols-outlined {
-   color: gray;
-   position: relative;
-   left: 90px;
+  color: gray;
+  position: absolute;
+  left: 30px; /* Atur jarak dari kiri */
+  font-size: 25px; /* Sesuaikan ukuran ikon */
+  pointer-events: none; /* Supaya ikon tidak mengganggu input */
 }
-
 
 /* INI STYLING UNTUK MAIN CONTENT */
 .notesContainer {
-	padding: 20px;
+  padding: 20px;
 }
 
 .grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	flex-wrap: wrap;
-	gap: 16px;
-    padding: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 8px;
 }
 
 .noteCard {
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .noteCardHeader {
-	display: flex;	
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 8px;
-	
-	.noteCard {
-		border: 1px solid #ccc;
-		border-radius: 8px;
-		padding: 16px;
-	}
-	
-	.noteCardHeader {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 8px;
-	}
-	
-	.noteCardTitle {
-		font-size: 1.25em;
-		margin: 0;
-		flex-grow: 1;
-	}
-	
-	.noteCardActions {
-		display: flex;
-		align-items: center;
-	}
-	
-	.noteCardButton {
-		background: none;
-		border: none;
-		cursor: pointer;
-		padding: 0;
-		margin-left: 4px; 
-	}
-	
-	.noteCardButton svg {
-		width: 16px;
-		height: 16px;
-	}
-	
-	.noteCardCategory {
-		border-radius: 4px;
-		padding: 1em 1em;
-		margin-left: 8px;
-		font-size: 0.875em;
-		color: #333;
-	}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+
+  .noteCard {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  .noteCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .noteCardTitle {
+    font-size: 1.25em;
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .noteCardActions {
+    display: flex;
+    align-items: center;
+  }
+
+  .noteCardButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 4px;
+  }
+
+  .noteCardButton svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .noteCardCategory {
+    border-radius: 4px;
+    padding: 1em 1em;
+    margin-left: 8px;
+    font-size: 0.875em;
+    color: #333;
+  }
 }
 
 .noteCardTitle {
-	font-size: 1.25em;
-	margin: 0;
+  font-size: 1.25em;
+  margin: 0;
 }
 
 .noteCardBody {
-	font-size: 1em;
-	padding: 0;
-	margin-top: 8px;
+  font-size: 1em;
+  padding: 0;
+  margin-top: 8px;
 }
 
 .noteCardButton {
-	background: none;
-	border: none;
-	cursor: pointer;
-	padding: 0;
-	object-position: right;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  object-position: right;
 }
 
 .noteCardButton svg {
-	width: 16px;
-	height: 16px;
+  width: 16px;
+  height: 16px;
 }
 
 .noteCardFooter {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .noteCardTime {
-	font-size: 1em;
-	margin-top: 1em;
-	font-weight: bolder;
+  font-size: 1em;
+  margin-top: 1em;
+  font-weight: bolder;
 }
 
 .noteCardDate {
-	font-size: 1em;
-	margin-top: 1em;
-	font-weight: bolder;
+  font-size: 1em;
+  margin-top: 1em;
+  font-weight: bolder;
 }
 
 .noteCardCategory#workCategory {
-	background-color: #ff00ea;
-	border-radius: 4px;
-	padding: 4px 8px;
-	font-size: 0.875em;
-	color: #ffffff;
+  background-color: #ff00ea;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.875em;
+  color: #ffffff;
 }
 
 .noteCardCategory#personalCategory {
-	background-color: #ff8800;
-	border-radius: 4px;
-	padding: 4px 8px;
-	font-size: 0.875em;
-	color: #ffffff;
+  background-color: #ff8800;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.875em;
+  color: #ffffff;
 }
 
 .noteCardCategory#schoolCategory {
-	background-color: #0011ff;
-	border-radius: 4px;
-	padding: 4px 8px;
-	font-size: 0.875em;
-	color: #ffffff;
+  background-color: #0011ff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.875em;
+  color: #ffffff;
 }
 
 .gridItem#workCategory {
-	background-color: rgba(255, 0, 234, 0.3);
-	border-radius: 10px;
-	padding: 4px 8px;
-	font-size: 0.875em;
-	color: #000000;
+  background-color: rgba(255, 0, 234, 0.3);
+  border-radius: 10px;
+  padding: 4px 8px;
+  font-size: 0.875em;
+  color: #000000;
 }
 
 .gridItem#personalCategory {
-	background-color: rgba(255, 136, 0, 0.3);
-	border-radius: 10px;
-	padding: 4px 8px;
-	font-size: 0.875em;
-	color: #000000;
+  background-color: rgba(255, 136, 0, 0.3);
+  border-radius: 10px;
+  padding: 4px 8px;
+  font-size: 0.875em;
+  color: #000000;
 }
 
 .gridItem#schoolCategory {
-	background-color: rgba(0, 17, 255, 0.3);
-	border-radius: 10px;
-	padding: 4px 8px;
-	font-size: 0.875em;
-	color: #000000;
+  background-color: rgba(0, 17, 255, 0.3);
+  border-radius: 10px;
+  padding: 4px 8px;
+  font-size: 0.875em;
+  color: #000000;
 }
 
 /* STYLING UNTUK BUTTON */
 .add-note button {
-    margin: auto;
-    padding: 23px; /* untuk mengubah jarak tulisan ke border*/
-    width: 95%; /* digunakan untuk menyesuaikan mau berapa % button 'add new notes' memenuhi layar */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    font-size: 25px; /* mengubah ukuran button bisa menggunakan ukuran font-size ini */
-    background-color: rgb(
-      7,
-      39,
-      236
-    ); /* warna background button 'add new notes' */
-    color: white; /* warna tulisan button 'add new notes' */
-    border: none; /* warna border button 'add new notes' */
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    transition-duration: 0.4s;
-  }
-  .add-note button:hover {
-    /* berubah warna button 'add new notes' */
-    background-color: rgb(5, 27, 172);
-    color: white;
-  }
+  margin: auto;
+  padding: 23px; /* untuk mengubah jarak tulisan ke border*/
+  width: 95%; /* digunakan untuk menyesuaikan mau berapa % button 'add new notes' memenuhi layar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 25px; /* mengubah ukuran button bisa menggunakan ukuran font-size ini */
+  background-color: rgb(
+    7,
+    39,
+    236
+  ); /* warna background button 'add new notes' */
+  color: white; /* warna tulisan button 'add new notes' */
+  border: none; /* warna border button 'add new notes' */
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+.add-note button:hover {
+  /* berubah warna button 'add new notes' */
+  background-color: rgb(5, 27, 172);
+  color: white;
+}
