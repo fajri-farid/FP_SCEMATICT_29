@@ -54,6 +54,7 @@ body {
 
 /* INI STYLING UNTUK NAVBAR */
 .navbar {
+  margin-top: 10px;
   background-color: #f8f8f8;
   padding: 10px;
   display: flex;
@@ -138,6 +139,7 @@ body {
 } */
 
 .grid {
+  margin-top: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   flex-wrap: wrap;
@@ -297,7 +299,8 @@ body {
 
 /* STYLING UNTUK BUTTON */
 .add-note button {
-  margin: auto;
+  margin-top: 10px;
+  /* margin: auto; */
   padding: 23px; /* untuk mengubah jarak tulisan ke border*/
   width: 100%; /* digunakan untuk menyesuaikan mau berapa % button 'add new notes' memenuhi layar */
   display: flex;
