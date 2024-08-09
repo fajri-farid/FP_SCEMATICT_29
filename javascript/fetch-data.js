@@ -30,7 +30,7 @@ function formatTimestamp(timestamp) {
   return { formattedTime, formattedDate };
 }
 
-// Fetch data from the API
+// Fetch data dari API
 fetch("https://v1.appbackend.io/v1/rows/bVAk25wv21ot")
   .then((response) => response.json())
   .then((result) => {
@@ -45,19 +45,21 @@ fetch("https://v1.appbackend.io/v1/rows/bVAk25wv21ot")
       notesGrid.innerHTML = "";
 
       notes.forEach((note) => {
-        const noteCategory = note.category.toLowerCase(); // Assuming your data has a 'category' field
+        const noteCategory = note.category.toLowerCase(); // Menggunakan kategori dari data
         const { formattedTime, formattedDate } = formatTimestamp(
           note.updatedAt
         );
 
-        // note card element disini!
-        const noteCard = `
-          <div class="gridItem" id="${noteCategory}Category">
-            <article class="noteCard">
-              <div class="noteCardHeader">
-                <h1 class="noteCardTitle">${note.name}</h1>
-                <button class="noteCardButton" id="editButton" title="Edit Note">
-                  <!-- SVG icon untuk edit -->
+        // Membuat elemen note card
+        const noteCard = document.createElement("div");
+        noteCard.className = "gridItem";
+        noteCard.id = `${noteCategory}Category`;
+        noteCard.innerHTML = `
+          <article class="noteCard">
+            <div class="noteCardHeader">
+              <h1 class="noteCardTitle">${note.name}</h1>
+              <button class="noteCardButton" title="Edit Note">
+                <!-- SVG icon untuk edit -->
                 <svg
                   width="15px"
                   height="15px"
@@ -80,9 +82,9 @@ fetch("https://v1.appbackend.io/v1/rows/bVAk25wv21ot")
                     stroke-linejoin="round"
                   />
                 </svg>
-                </button>
-                <button class="noteCardButton" id="deleteButton" title="Delete Note">
-                  <!-- SVG icon untuk delete -->
+              </button>
+              <button class="noteCardButton deleteButton" title="Delete Note" data-id="${note._id}">
+                <!-- SVG icon untuk delete -->
                 <svg
                   width="15px"
                   height="15px"
@@ -98,25 +100,52 @@ fetch("https://v1.appbackend.io/v1/rows/bVAk25wv21ot")
                     stroke-linejoin="round"
                   />
                 </svg>
-                </button>
-                <div class="noteCardCategory" id=${note.category}>${note.category}</div>
-              </div>
-              <div class="noteCardBody">
-                <p class="bodyContent">${note.description}</p>
-              </div>
-              <div class="noteCardFooter">
-                <p class="noteCardTime">${formattedTime}</p>
-                <p class="noteCardDate">${formattedDate}</p>
-              </div>
-            </article> 
-          </div>
+              </button>
+              <div class="noteCardCategory" id="${note.category}">${note.category}</div>
+            </div>
+            <div class="noteCardBody">
+              <p class="bodyContent">${note.description}</p>
+            </div>
+            <div class="noteCardFooter">
+              <p class="noteCardTime">${formattedTime}</p>
+              <p class="noteCardDate">${formattedDate}</p>
+            </div>
+          </article> 
         `;
 
-        // memasukkan noteCard ke grid yang disiapkan di html
-        notesGrid.innerHTML += noteCard;
+        // Memasukkan noteCard ke grid yang disiapkan di HTML
+        notesGrid.appendChild(noteCard);
+      });
+
+      // Menambahkan event listener untuk tombol delete
+      document.querySelectorAll(".deleteButton").forEach((button) => {
+        button.addEventListener("click", function () {
+          const noteId = this.getAttribute("data-id");
+          deleteNote(noteId); // Panggil fungsi untuk delete note
+        });
       });
     } else {
       console.error("Expected an array, but got:", result);
     }
   })
   .catch((error) => console.log("error", error));
+
+// Fungsi untuk menghapus note berdasarkan _id
+function deleteNote(noteId) {
+  const url = "https://v1.appbackend.io/v1/rows/bVAk25wv21ot";
+
+  fetch(url, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify([noteId]), // Mengirimkan array yang berisi id note yang ingin dihapus
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+      // Merefresh halaman setelah note berhasil dihapus
+      window.location.reload();
+    })
+    .catch((error) => console.log("error", error));
+}
