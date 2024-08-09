@@ -95,6 +95,19 @@ select {
   outline: none;
 }
 
+.note-container input,
+textarea,
+select {
+  font-family: Arial, sans-serif;
+}
+
+#char-count {
+  margin-top: 5px;
+  color: #666;
+  font-size: 14px;
+  margin-left: auto;
+}
+
 /* reponsif */
 @media (max-width: 950px) {
   .note-container {
@@ -134,7 +147,7 @@ select {
   }
 
   .form-actions {
-    flex-direction: column;
+    flex-direction: row;
     align-items: stretch;
     gap: 10px;
   }
