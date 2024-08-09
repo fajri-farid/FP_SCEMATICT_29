@@ -2,12 +2,12 @@
 function formatTimestamp(timestamp) {
   const date = new Date(timestamp);
 
-  // Format time as jam:menit
+  // Format updateAt menjadi jam:menit
   const hours = date.getHours().toString().padStart(2, "0");
   const minutes = date.getMinutes().toString().padStart(2, "0");
   const formattedTime = `${hours}:${minutes}`;
 
-  // Format date as tanggal bulan tahun
+  // Format updateAt menjadi tanggal bulan tahun
   const day = date.getDate().toString().padStart(2, "0");
   const monthNames = [
     "Januari",
@@ -42,7 +42,7 @@ fetch("https://v1.appbackend.io/v1/rows/bVAk25wv21ot")
     if (Array.isArray(notes)) {
       const notesGrid = document.getElementById("notesGrid");
 
-      notesGrid.innerHTML = ""; // Clear existing content
+      notesGrid.innerHTML = "";
 
       notes.forEach((note) => {
         const noteCategory = note.category.toLowerCase(); // Assuming your data has a 'category' field
@@ -50,7 +50,7 @@ fetch("https://v1.appbackend.io/v1/rows/bVAk25wv21ot")
           note.updatedAt
         );
 
-        // Create a note card element
+        // note card element disini!
         const noteCard = `
           <div class="gridItem" id="${noteCategory}Category">
             <article class="noteCard">
@@ -112,7 +112,7 @@ fetch("https://v1.appbackend.io/v1/rows/bVAk25wv21ot")
           </div>
         `;
 
-        // Append the note card to the grid
+        // memasukkan noteCard ke grid yang disiapkan di html
         notesGrid.innerHTML += noteCard;
       });
     } else {
