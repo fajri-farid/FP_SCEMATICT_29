@@ -34,7 +34,6 @@ document
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          //   apikey: "PqNJ8UUrZUEgaOTbkZ5jtoFGf4amoOZ5Rxsb", // Add your API key here
         },
         body: JSON.stringify([
           {
