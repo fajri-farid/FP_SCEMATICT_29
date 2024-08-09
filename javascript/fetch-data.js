@@ -1,5 +1,12 @@
-// Function to convert timestamp to the desired format
-function formatTimestamp(timestamp) {
+import { filterNotes } from "./filter.js";
+
+// Panggil fungsi filter untuk menampilkan semua notes saat halaman dimuat
+document.addEventListener("DOMContentLoaded", () => {
+  filterNotes("all"); // Pastikan ini ada
+});
+
+// format tanggal
+export function formatTimestamp(timestamp) {
   const date = new Date(timestamp);
 
   // Format updateAt menjadi jam:menit

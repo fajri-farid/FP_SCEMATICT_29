@@ -86,7 +86,7 @@ body {
 }
 
 #all:hover {
-  background-color: cornflowerblue;
+  background-color: #6495ed;
   color: #fff;
 }
 #Work:hover {
@@ -126,6 +126,27 @@ body {
 
 .nav-button[id="School"]::after {
   background-color: #0011ff;
+}
+
+/* untuk ketika button category yg aktif */
+#all.active {
+  background-color: #6495ed;
+  color: white;
+}
+
+#Work.active {
+  background-color: #ff00ea;
+  color: white;
+}
+
+#Personal.active {
+  background-color: #ff8800;
+  color: white;
+}
+
+#School.active {
+  background-color: #0011ff;
+  color: white;
 }
 
 /* INI STYLING UNTUK component 3 */
