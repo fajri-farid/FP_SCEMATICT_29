@@ -244,7 +244,7 @@ body {
   font-weight: bolder;
 }
 
-.noteCardCategory#workCategory {
+.noteCardCategory#Work {
   background-color: #ff00ea;
   border-radius: 4px;
   padding: 8px 20px;
@@ -252,7 +252,7 @@ body {
   color: #ffffff;
 }
 
-.noteCardCategory#personalCategory {
+.noteCardCategory#Personal {
   background-color: #ff8800;
   border-radius: 4px;
   padding: 8px 20px;
@@ -260,7 +260,7 @@ body {
   color: #ffffff;
 }
 
-.noteCardCategory#schoolCategory {
+.noteCardCategory#School {
   background-color: #0011ff;
   border-radius: 4px;
   padding: 8px 20px;
