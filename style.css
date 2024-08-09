@@ -89,16 +89,16 @@ body {
   background-color: cornflowerblue;
   color: #fff;
 }
-#work:hover {
-  background-color: #03346e;
+#Work:hover {
+  background-color: #ff00ea;
   color: #fff;
 }
 #Personal:hover {
-  background-color: #399918;
+  background-color: #ff8800;
   color: #fff;
 }
 #School:hover {
-  background-color: #c75b7a;
+  background-color: #0011ff;
   color: #fff;
 }
 
@@ -120,7 +120,7 @@ body {
   background-color: orange;
 }
 
-.nav-button[id="work"]::after {
+.nav-button[id="Work"]::after {
   background-color: #03346e;
 }
 
