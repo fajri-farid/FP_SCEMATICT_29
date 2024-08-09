@@ -180,11 +180,6 @@ body {
     flex-grow: 1;
   }
 
-  .noteCardActions {
-    display: flex;
-    align-items: center;
-  }
-
   .noteCardButton {
     background: none;
     border: none;
