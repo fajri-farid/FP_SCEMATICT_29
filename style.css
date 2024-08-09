@@ -116,20 +116,16 @@ body {
   transition: background-color 0.3s;
 }
 
-.nav-button[id="home"]::after {
-  background-color: orange;
-}
-
 .nav-button[id="Work"]::after {
-  background-color: #03346e;
+  background-color: #ff00ea;
 }
 
 .nav-button[id="Personal"]::after {
-  background-color: #399918;
+  background-color: #ff8800;
 }
 
 .nav-button[id="School"]::after {
-  background-color: #c75b7a;
+  background-color: #0011ff;
 }
 
 /* INI STYLING UNTUK component 3 */
