@@ -1,13 +1,15 @@
 *,
 html,
 body {
-  margin: 19px 30px;
-  padding: 0;
+  /* margin: 19px 20px;
+  padding: 0; */
   box-sizing: border-box;
 }
 
 body {
   font-family: Arial, sans-serif;
+  margin: 30px 100px;
+  padding: 0;
 }
 
 /* INI STYLING UNTUK NAVBAR */
@@ -132,7 +134,7 @@ body {
   pointer-events: none; /* Supaya ikon tidak mengganggu input */
 }
 
-/* INI STYLING UNTUK MAIN CONTENT */
+/* INI STYLING UNTUK component 3 */
 .notesContainer {
   padding: 20px;
 }
@@ -150,6 +152,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%; /* Memastikan semua kartu memiliki tinggi yang sama */
 }
 
 .noteCardHeader {
@@ -298,7 +301,7 @@ body {
 .add-note button {
   margin: auto;
   padding: 23px; /* untuk mengubah jarak tulisan ke border*/
-  width: 95%; /* digunakan untuk menyesuaikan mau berapa % button 'add new notes' memenuhi layar */
+  width: 100%; /* digunakan untuk menyesuaikan mau berapa % button 'add new notes' memenuhi layar */
   display: flex;
   justify-content: center;
   align-items: center;
