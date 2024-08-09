@@ -58,7 +58,7 @@ fetch("https://v1.appbackend.io/v1/rows/bVAk25wv21ot")
           <article class="noteCard">
             <div class="noteCardHeader">
               <h1 class="noteCardTitle">${note.name}</h1>
-              <button class="noteCardButton" title="Edit Note">
+              <button class="noteCardButton editButton" title="Edit Note" data-id="${note._id}">
                 <!-- SVG icon untuk edit -->
                 <svg
                   width="15px"
@@ -122,6 +122,14 @@ fetch("https://v1.appbackend.io/v1/rows/bVAk25wv21ot")
         button.addEventListener("click", function () {
           const noteId = this.getAttribute("data-id");
           deleteNote(noteId); // Panggil fungsi untuk delete note
+        });
+      });
+
+      // Menambahkan event listener untuk tombol edit
+      document.querySelectorAll(".editButton").forEach((button) => {
+        button.addEventListener("click", function () {
+          const noteId = this.getAttribute("data-id");
+          window.location.href = `edit-note.html?id=${noteId}`;
         });
       });
     } else {
