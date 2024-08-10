@@ -135,6 +135,9 @@ function displayNotes(notes) {
 
     notesGrid.appendChild(noteCard);
   });
+
+  // Panggil setupNoteActions setelah menampilkan catatan
+  setupNoteActions();
 }
 
 // Fungsi untuk mencari catatan berdasarkan query
