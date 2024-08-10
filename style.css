@@ -341,3 +341,24 @@ body {
 .add-note a {
   text-decoration: none;
 }
+
+/* mobile devices */
+@media screen and (max-width:767px) {
+  body {
+    margin: 30px 10px;
+  }
+
+  .grid{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+/* tablet devices */
+
+@media screen and (min-width:768px) and (max-width:1023px){
+  body {
+    margin:30px 50px
+  }
+}
