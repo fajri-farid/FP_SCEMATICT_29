@@ -72,11 +72,26 @@ document.getElementById("description").addEventListener("input", function () {
   document.getElementById(
     "char-count"
   ).textContent = `${remaining} characters remaining`;
-
-  // Update border color based on character limit
-  if (currentLength > maxLength) {
-    this.classList.add("error");
-  } else {
-    this.classList.remove("error");
-  }
 });
+
+// Menangani event paste untuk mencegah melebihi batas karakter
+document
+  .getElementById("description")
+  .addEventListener("paste", function (event) {
+    const maxLength = 250;
+    const pasteText = (event.clipboardData || window.clipboardData).getData(
+      "text"
+    );
+    const currentLength = this.value.length;
+    const remainingLength = maxLength - currentLength;
+
+    // Jika teks yang di-paste melebihi sisa karakter yang diperbolehkan, cegah paste
+    if (pasteText.length > remainingLength) {
+      event.preventDefault();
+      this.value += pasteText.substring(0, remainingLength); // Hanya paste teks yang muat dalam sisa karakter
+      const newLength = this.value.length;
+      document.getElementById("char-count").textContent = `${
+        maxLength - newLength
+      } characters remaining`;
+    }
+  });
