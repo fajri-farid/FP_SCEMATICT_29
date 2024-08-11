@@ -18,8 +18,12 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgb(230, 230, 230);
-  padding: 8px; /* padding kotak abu abu search bar*/
-  position: relative;
+  padding: 8px; /* padding kotak abu abu search bar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Memastikan search bar berada di atas elemen lainnya */
 }
 
 .search input {
@@ -349,5 +353,15 @@ body {
       100% - 100px
     ); /* Mengatur lebar elemen add-note menjadi 100% lebar layar dikurangi 100px, sehingga ada jarak 50px di setiap sisi */
     margin-left: 50px; /* Menambahkan margin kiri sebesar 50px untuk menyelaraskan elemen dengan margin di sisi kanan */
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .search {
+    width: calc(
+      100% - 200px
+    ); /* Sesuaikan lebar untuk memperhitungkan margin 100px di setiap sisi */
+    margin-left: 100px; /* Sejajarkan dengan margin body */
+    margin-right: 100px; /* Sejajarkan dengan margin body */
   }
 }
