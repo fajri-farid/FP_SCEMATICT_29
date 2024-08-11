@@ -177,88 +177,49 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8px;
+}
+.noteCard {
+border: 1px solid #ccc;
+border-radius: 8px;
+padding: 16px;
+border: none;
+}
 
-  .noteCard {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-  }
-
-  .noteCardHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-
-  .noteCardTitle {
-    font-size: 1.25em;
-    margin: 0;
-    flex-grow: 1;
-  }
-
-  .noteCardButton {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    margin-left: 4px;
-  }
-
-  .noteCardButton svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .noteCardCategory {
-    border-radius: 4px;
-    padding: 1em 1em;
-    margin-left: 8px;
-    font-size: 0.875em;
-    color: #333;
-  }
+.noteCardHeader {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 8px;
 }
 
 .noteCardTitle {
-  font-size: 1.25em;
-  margin: 0;
-}
-
-.noteCardBody {
-  font-size: 1.2em;
-  padding: 0;
-  margin-top: 8px;
+font-size: 1.5em;
+margin: 0;
+flex-grow: 1;
 }
 
 .noteCardButton {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  object-position: right;
+background: none;
+border: none;
+cursor: pointer;
+padding: 0;
+margin-left: 4px;
 }
 
 .noteCardButton svg {
-  width: 16px;
-  height: 16px;
+  width: 25px;
+  height: 25px;
 }
 
-.noteCardFooter {
-  display: flex;
-  justify-content: space-between;
+.noteCardCategory {
+  border-radius: 4px;
+  padding: 1em 1em;
+  margin-left: 8px; 
+  font-size: 1em;
+  color: #333;
+  height: 33px;
+  justify-content: center;
   align-items: center;
-}
-
-.noteCardTime {
-  font-size: 1em;
-  margin-top: 1em;
-  font-weight: bolder;
-}
-
-.noteCardDate {
-  font-size: 1em;
-  margin-top: 1em;
-  font-weight: bolder;
 }
 
 .noteCardCategory#Work {
@@ -343,7 +304,7 @@ body {
 }
 
 /* mobile devices */
-@media screen and (max-width:767px) {
+@media screen and (min-width:0px) and (max-width:767px) {
   body {
     margin: 30px 10px;
   }
@@ -353,6 +314,11 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
   }
+
+  .noteCardButton svg {
+    width: 22px;
+    height: 22px;
+  }
 }
 
 /* tablet devices */
@@ -360,5 +326,10 @@ body {
 @media screen and (min-width:768px) and (max-width:1023px){
   body {
     margin:30px 50px
+  }
+
+  .noteCardButton svg {
+    width: 23px;
+    height: 23px;
   }
 }
