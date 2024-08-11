@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <!--  -->
+    <!-- Icon Search -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <!-- INI CONTAINER SEARCH BAR -->
+    <div class="search">
+      <span class="material-symbols-outlined">search</span>
+      <input
+        class="search-bar"
+        type="search"
+        placeholder="Search Notes..."
+        id="searchInput"
+      />
+    </div>
+
+    <!-- INI CONTAINER NAVBAR -->
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <button class="nav-button" id="all">All</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-button" id="Work">Work</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-button" id="Personal">Personal</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-button" id="School">School</button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- INI CONTAINER CONTENT MAIN -->
+
+    <div class="notesContainer">
+      <div class="grid" id="notesGrid">
+        <!-- Notes will be populated here -->
+      </div>
+    </div>
+    <!-- Grid container -->
+
+    <!-- CONTAINER UNTUK COMPONENT BUTTON -->
+    <div></div>
+    <div class="add-note">
+      <a href="add-note.html"><button>Add New Notes</button></a>
+      <!-- button new notes html-->
+    </div>
+
+    <script type="module" src="javascript/fetch-data.js"></script>
+    <script type="module" src="javascript/filter.js"></script>
+  </body>
+</html>
