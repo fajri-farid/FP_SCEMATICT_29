@@ -276,6 +276,12 @@ body {
   color: #000000;
 }
 
+.noteCardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* STYLING UNTUK BUTTON */
 .add-note {
   position: fixed;
