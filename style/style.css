@@ -151,9 +151,10 @@ body {
 
 /* INI STYLING UNTUK component 3 */
 
-/* .notesContainer {
-  padding: 20px;
-} */
+/* Agar tidak ada note yang ketutup dengan add notes */
+.notesContainer {
+  padding-bottom: 80px;
+}
 
 .grid {
   margin-top: 15px;
@@ -179,31 +180,31 @@ body {
   margin-bottom: 8px;
 }
 .noteCard {
-border: 1px solid #ccc;
-border-radius: 8px;
-padding: 16px;
-border: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  border: none;
 }
 
 .noteCardHeader {
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
 .noteCardTitle {
-font-size: 1.5em;
-margin: 0;
-flex-grow: 1;
+  font-size: 1.5em;
+  margin: 0;
+  flex-grow: 1;
 }
 
 .noteCardButton {
-background: none;
-border: none;
-cursor: pointer;
-padding: 0;
-margin-left: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 4px;
 }
 
 .noteCardButton svg {
@@ -214,7 +215,7 @@ margin-left: 4px;
 .noteCardCategory {
   border-radius: 4px;
   padding: 1em 1em;
-  margin-left: 8px; 
+  margin-left: 8px;
   font-size: 1em;
   color: #333;
   height: 33px;
@@ -271,30 +272,33 @@ margin-left: 4px;
 }
 
 /* STYLING UNTUK BUTTON */
+.add-note {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: calc(
+    100% - 200px
+  ); /* Sesuaikan lebar untuk memperhitungkan margin 100px di setiap sisi */
+  margin-left: 100px; /* Sejajarkan dengan margin body */
+  margin-right: 100px; /* Sejajarkan dengan margin body */
+  z-index: 100; /* Memastikan tombol berada di atas elemen lainnya */
+}
+
 .add-note button {
-  margin-top: 10px;
-  /* margin: auto; */
-  padding: 23px; /* untuk mengubah jarak tulisan ke border*/
-  width: 100%; /* digunakan untuk menyesuaikan mau berapa % button 'add new notes' memenuhi layar */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  font-size: 25px; /* mengubah ukuran button bisa menggunakan ukuran font-size ini */
-  background-color: rgb(
-    7,
-    39,
-    236
-  ); /* warna background button 'add new notes' */
-  color: white; /* warna tulisan button 'add new notes' */
-  border: none; /* warna border button 'add new notes' */
+  padding: 23px;
+  width: 100%;
+  border-radius: 10px; /* Memastikan tombol berbentuk persegi panjang sepenuhnya */
+  font-size: 25px;
+  background-color: rgb(7, 39, 236);
+  color: white;
+  border: none;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   transition-duration: 0.4s;
 }
+
 .add-note button:hover {
-  /* berubah warna button 'add new notes' */
   background-color: rgb(5, 27, 172);
   color: white;
 }
@@ -304,12 +308,12 @@ margin-left: 4px;
 }
 
 /* mobile devices */
-@media screen and (min-width:0px) and (max-width:767px) {
+@media screen and (min-width: 0px) and (max-width: 767px) {
   body {
     margin: 30px 10px;
   }
 
-  .grid{
+  .grid {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -319,17 +323,31 @@ margin-left: 4px;
     width: 22px;
     height: 22px;
   }
+
+  .add-note {
+    width: calc(
+      100% - 20px
+    ); /* Mengatur lebar elemen add-note menjadi 100% lebar layar dikurangi 20px, sehingga ada jarak 10px di setiap sisi */
+    margin-left: 10px; /* Menambahkan margin kiri sebesar 10px untuk menyelaraskan elemen dengan margin di sisi kanan */
+  }
 }
 
 /* tablet devices */
 
-@media screen and (min-width:768px) and (max-width:1023px){
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   body {
-    margin:30px 50px
+    margin: 30px 50px;
   }
 
   .noteCardButton svg {
     width: 23px;
     height: 23px;
+  }
+
+  .add-note {
+    width: calc(
+      100% - 100px
+    ); /* Mengatur lebar elemen add-note menjadi 100% lebar layar dikurangi 100px, sehingga ada jarak 50px di setiap sisi */
+    margin-left: 50px; /* Menambahkan margin kiri sebesar 50px untuk menyelaraskan elemen dengan margin di sisi kanan */
   }
 }
