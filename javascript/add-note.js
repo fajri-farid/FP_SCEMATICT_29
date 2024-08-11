@@ -75,6 +75,19 @@ document.getElementById("description").addEventListener("input", function () {
   document.getElementById(
     "char-count"
   ).textContent = `${remaining} characters remaining`;
+
+  if (currentLength >= maxLength) {
+    alert("description cannot exceed 250 characters.");
+  }
+});
+
+document.getElementById("title").addEventListener("input", function () {
+  const maxLength = 60;
+  const currentLength = this.value.length;
+
+  if (currentLength >= maxLength) {
+    alert("title cannot exceed 60 characters.");
+  }
 });
 
 // Menangani event paste untuk mencegah melebihi batas karakter

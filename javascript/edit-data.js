@@ -121,7 +121,21 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById(
       "char-count"
     ).textContent = `${remaining} characters remaining`;
+
+    if (currentLength >= maxLength) {
+      alert("Description cannot exceed 250 characters.");
+    }
   }
+
+  // untuk title
+  document.getElementById("title").addEventListener("input", function () {
+    const maxLength = 60;
+    const currentLength = this.value.length;
+
+    if (currentLength >= maxLength) {
+      alert("Title cannot exceed 60 characters.");
+    }
+  });
 
   // Attach input event listener for description to update character count
   document.getElementById("description").addEventListener("input", function () {
