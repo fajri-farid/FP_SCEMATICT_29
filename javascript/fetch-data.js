@@ -175,7 +175,12 @@ function setupNoteActions() {
   document.querySelectorAll(".deleteButton").forEach((button) => {
     button.addEventListener("click", function () {
       const noteId = this.getAttribute("data-id");
-      deleteNote(noteId);
+
+      // Tampilkan konfirmasi sebelum menghapus
+      const confirmation = confirm("Are you sure you want to delete the note?");
+      if (confirmation) {
+        deleteNote(noteId);
+      }
     });
   });
 

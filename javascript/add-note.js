@@ -51,6 +51,9 @@ document
             .querySelectorAll("input, textarea")
             .forEach((el) => el.classList.remove("error"));
 
+          // Menampilkan alert sebelum kembali ke halaman utama
+          alert("note created successfully!");
+
           // ketika berhasil kembali ke halaman utama
           window.location.href = "index.html";
         })

@@ -88,6 +88,11 @@ document.addEventListener("DOMContentLoaded", function () {
           })
           .then((result) => {
             console.log("Note updated successfully!", result);
+
+            // Menampilkan alert sebelum kembali ke halaman utama
+            alert("note updated successfully!");
+
+            // ketika berhasil kembali ke halaman utama
             window.location.href = "index.html";
           })
           .catch((error) => {
